@@ -56,7 +56,7 @@ const Part1 = (props: Props) => {
                     Important: The actual algorithm must be implemented itself. The use of functions like eval in JavaScript are not permitted.
                 </Text>
 
-                <Text my={2} color="gray.800">
+                <Text my={2} color="gray.600">
                     Enters the term <Input color="gray.500" placeholder='Please fill out.' type="text" value={inputValue} onChange={handleChange} />
                 </Text>
 

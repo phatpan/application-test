@@ -60,3 +60,16 @@ export const calculator = (expression: string) => {
 
   return result;
 }
+
+
+export const findLastNumber = (n: number): number => {
+  const nStr = n.toString();
+  const length = nStr.length;
+
+  let lastNumber = Number("1" + "9".repeat(length - 1));
+  while (lastNumber > n) {
+    lastNumber = Number("1" + (lastNumber % 10 - 1) + "9".repeat(length - 2));
+  }
+
+  return lastNumber;
+}
