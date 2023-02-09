@@ -3,9 +3,7 @@ import {
     Box,
     Button,
     Text,
-    Input,
-    NumberInputField,
-    NumberInput
+    Input
 } from '@chakra-ui/react';
 import { useState } from 'react';
 

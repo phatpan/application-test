@@ -24,5 +24,11 @@ module.exports = {
             statements: 80
         }
     },
-    coverageReporters: ['text', 'html']
+    coverageReporters: ['text', 'html'],
+    resolve: {
+        alias: {
+            '@components': path.resolve(__dirname, 'components'),
+            '@utils': path.resolve(__dirname, 'utils')
+        }
+    }
 };

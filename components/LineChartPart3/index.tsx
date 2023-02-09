@@ -1,5 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { Point } from '../../utils/tasksUtils';
+import { Point } from '@utils/tasksUtils';
 
 interface Props {
     data: Point[]

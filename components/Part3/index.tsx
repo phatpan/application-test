@@ -6,8 +6,8 @@ import {
     Input
 } from '@chakra-ui/react';
 import { useState } from 'react';
-import { Point } from '../../utils/tasksUtils';
-import LineChartPart3 from '../LineChartPart3';
+import { Point } from '@utils/tasksUtils';
+import LineChartPart3 from '@components/LineChartPart3';
 
 interface Props {
     onClick?: (inputValue: String) => void

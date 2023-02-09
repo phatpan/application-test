@@ -6,10 +6,10 @@ import {
     Link
 } from '@chakra-ui/react';
 import { useState } from 'react';
-import { calculator, findLastNumber, plotGraph } from '../utils/tasksUtils';
-import Part1 from '../components/Part1';
-import Part2 from '../components/Part2';
-import Part3 from '../components/Part3';
+import { calculator, findLastNumber, plotGraph } from '@utils/tasksUtils';
+import Part1 from '@components/Part1';
+import Part2 from '@components/Part2';
+import Part3 from '@components/Part3';
 
 const IndexPage: NextPage = () => {
     const [resultCalculate, setResultCalculate] = useState('')
