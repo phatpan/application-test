@@ -12,7 +12,7 @@ interface Props {
     onClick?: (inputValue: String) => void
 }
 
-const Part1 = (props: Props) => {
+export const TermCalculator = (props: Props) => {
     const [inputValue, setInputValue] = useState('');
 
     const handleChange = (event) => {
@@ -70,5 +70,3 @@ const Part1 = (props: Props) => {
         </Box>
     </>
 }
-
-export default Part1

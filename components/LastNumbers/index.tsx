@@ -12,7 +12,7 @@ interface Props {
     onClick?: (inputValue: number) => void
 }
 
-const Part2 = (props: Props) => {
+export const LastNumbers = (props: Props) => {
     const [inputValue, setInputValue] = useState('');
 
     const handleChange = (event) => {
@@ -78,5 +78,3 @@ const Part2 = (props: Props) => {
         </Stack>
     </Box>
 }
-
-export default Part2

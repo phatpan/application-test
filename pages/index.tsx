@@ -7,9 +7,9 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { calculator, findLastNumber, plotGraph } from '@utils/tasksUtils';
-import Part1 from '@components/Part1';
-import Part2 from '@components/Part2';
-import Part3 from '@components/Part3';
+import { TermCalculator } from '@components/TermCalculator';
+import { LastNumbers } from '@components/LastNumbers';
+import { Chart } from '@components/Chart';
 
 const IndexPage: NextPage = () => {
     const [resultCalculate, setResultCalculate] = useState('')
@@ -35,9 +35,9 @@ const IndexPage: NextPage = () => {
     return (<Container>
         <Heading mt={5} mb={5} as="h1">Tasks</Heading>
         <Text color="gray.600" mt={5} mb={5}>Source code: <Link>https://github.com/phatpan/application-test</Link> </Text>
-        <Part1 onClick={calculate} result={resultCalculate} />
-        <Part2 onClick={calculateNumbers} result={numbers} />
-        <Part3 onClick={calculateChart} data={dataChart} />
+        <TermCalculator onClick={calculate} result={resultCalculate} />
+        <LastNumbers onClick={calculateNumbers} result={numbers} />
+        <Chart onClick={calculateChart} data={dataChart} />
     </Container>
     )
 }
