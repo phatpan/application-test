@@ -5,7 +5,7 @@ interface Props {
     data: Point[]
 }
 
-const LineChartPart3 = (props: Props) => {
+export const PlotChart = (props: Props) => {
     return (
         <LineChart
             width={400}
@@ -21,5 +21,3 @@ const LineChartPart3 = (props: Props) => {
         </LineChart>
     );
 }
-
-export default LineChartPart3

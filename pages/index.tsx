@@ -9,7 +9,7 @@ import { useState } from 'react';
 import { calculator, findLastNumber, plotGraph } from '@utils/tasksUtils';
 import { TermCalculator } from '@components/TermCalculator';
 import { LastNumbers } from '@components/LastNumbers';
-import { Chart } from '@components/Chart';
+import { GraphByTermCalculator } from '@components/GraphByTermCalculator';
 
 const IndexPage: NextPage = () => {
     const [resultCalculate, setResultCalculate] = useState('')
@@ -37,7 +37,7 @@ const IndexPage: NextPage = () => {
         <Text color="gray.600" mt={5} mb={5}>Source code: <Link>https://github.com/phatpan/application-test</Link> </Text>
         <TermCalculator onClick={calculate} result={resultCalculate} />
         <LastNumbers onClick={calculateNumbers} result={numbers} />
-        <Chart onClick={calculateChart} data={dataChart} />
+        <GraphByTermCalculator onClick={calculateChart} data={dataChart} />
     </Container>
     )
 }

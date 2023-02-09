@@ -7,14 +7,14 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { Point } from '@utils/tasksUtils';
-import LineChartPart3 from '@components/LineChartPart3';
+import { PlotChart } from '@components/PlotChart';
 
 interface Props {
     onClick?: (inputValue: String) => void
     data: Point[]
 }
 
-const Part3 = (props: Props) => {
+export const Chart = (props: Props) => {
     const [inputValue, setInputValue] = useState('');
 
     const handleChange = (event) => {
@@ -58,10 +58,8 @@ const Part3 = (props: Props) => {
                 <Button maxWidth="100px" my={2} onClick={submit}>
                     Submit
                 </Button>
-                {props.data.length > 0 && (<LineChartPart3 data={props.data} />)}
+                {props.data.length > 0 && (<PlotChart data={props.data} />)}
             </Stack>
         </Box>
     </>
 }
-
-export default Part3
