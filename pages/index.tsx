@@ -6,7 +6,7 @@ import {
     Link
 } from '@chakra-ui/react';
 import { useState } from 'react';
-import { calculator, findLastNumber, plotGraph } from '@utils/tasksUtils';
+import { calculator, lastNumberWrittenByPeter, plotGraph } from '@utils/tasksUtils';
 import { TermCalculator } from '@components/TermCalculator';
 import { LastNumbers } from '@components/LastNumbers';
 import { GraphByTermCalculator } from '@components/GraphByTermCalculator';
@@ -25,7 +25,7 @@ const IndexPage: NextPage = () => {
     }
 
     function calculateNumbers(input: number) {
-        setBumbers(findLastNumber(input).toString())
+        setBumbers(lastNumberWrittenByPeter(input).toString())
     }
 
     function calculateChart(input: string) {

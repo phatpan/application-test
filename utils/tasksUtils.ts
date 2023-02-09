@@ -63,40 +63,27 @@ export const calculator = (expression: string) => {
   }
 }
 
+export const lastNumberWrittenByPeter = (num: number): number => {
+  let str = num.toString();
+  let len = str.length;
+  let res = "";
 
-export const findLastNumber = (n: number): number => {
-  const nStr = n.toString();
-  const length = nStr.length;
-
-  let lastNumber = Number("1" + "9".repeat(length - 1));
-  while (lastNumber > n) {
-    lastNumber = Number("1" + (lastNumber % 10 - 1) + "9".repeat(length - 2));
-  }
-
-  return lastNumber;
-}
-
-function evaluate(expression) {
-  const tokens = expression.split(" ");
-  const stack = [];
-
-  for (let token of tokens) {
-    if (["+", "-", "*", "/"].includes(token)) {
-      const b = parseFloat(stack.pop());
-      const a = parseFloat(stack.pop());
-      if (token === "+") stack.push(a + b);
-      if (token === "-") stack.push(a - b);
-      if (token === "*") stack.push(a * b);
-      if (token === "/") stack.push(a / b);
+  for (let i = 0; i < len; i++) {
+    if (str[i] == "9") {
+      res += "9";
     } else {
-      stack.push(token);
+      res += (parseInt(str[i]) - 1).toString();
+      for (let j = i + 1; j < len; j++) {
+        res += "9";
+      }
+      break;
     }
   }
 
-  return stack[0];
+  return parseInt(res);
 }
 
-function infixToPostfix(expression) {
+const infixToPostfix = (expression) => {
   const tokens = expression.split(" ");
   const stack = [];
   const output = [];

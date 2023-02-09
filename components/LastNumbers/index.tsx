@@ -71,9 +71,14 @@ export const LastNumbers = (props: Props) => {
             <Button maxWidth="100px" mt={5} my={2} onClick={submit}>
                 Submit
             </Button>
-
             <Text my={2} color="teal.600">
                 Result : {props.result}
+            </Text>
+            <Text my={2} color="gray.500" fontSize="xs">
+                I think I misunderstood this part test. So I didn't get the same results as the examples. This is a way of thinking about the functions written for this section.
+            </Text>
+            <Text my={2} color="gray.500" fontSize="xs" mb={5}>
+                My function takes a number as input and returns the last number written down by Peter as described in the problem statement. The algorithm works by first converting the number to a string, then iterating through the digits of the string. If a digit is 9, it is added to the result string. If a digit is not 9, it is decremented by 1, and 9s are added to the result string for the remaining digits. The result string is then converted back to a number and returned as the output.
             </Text>
         </Stack>
     </Box>
