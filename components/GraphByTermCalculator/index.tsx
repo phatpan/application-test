@@ -14,7 +14,7 @@ interface Props {
     data: Point[]
 }
 
-export const Chart = (props: Props) => {
+export const GraphByTermCalculator = (props: Props) => {
     const [inputValue, setInputValue] = useState('');
 
     const handleChange = (event) => {
