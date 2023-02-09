@@ -1,4 +1,4 @@
-import { calculator } from "./tasksUtils";
+import { calculator, plotGraph } from "./tasksUtils";
 
 describe('Term calculator', () => {
     it('should return value when input has space', () => {

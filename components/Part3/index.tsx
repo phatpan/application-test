@@ -6,13 +6,15 @@ import {
     Input
 } from '@chakra-ui/react';
 import { useState } from 'react';
+import { Point } from '../../utils/tasksUtils';
+import LineChartPart3 from '../LineChartPart3';
 
 interface Props {
-    result: string
     onClick?: (inputValue: String) => void
+    data: Point[]
 }
 
-const Part1 = (props: Props) => {
+const Part3 = (props: Props) => {
     const [inputValue, setInputValue] = useState('');
 
     const handleChange = (event) => {
@@ -43,16 +45,10 @@ const Part1 = (props: Props) => {
                     letterSpacing="wide"
                     color="teal.600"
                 >
-                    Part 1
+                    Part 3, based on Part 1
                 </Text>
                 <Text my={2} color="gray.500">
-                    Develop a term calculator that can handle (), *, /, +, and -. For example, if the user enters the term (5+8)*3/8+3, the term calculator shall calculate and output the result according to the school rules of term calculations.
-                </Text>
-                <Text my={2} color="gray.500">
-                    These rules are: () before * and /, * and / before + and -. Several * and / are calculated from left to right, several + and - also from left to right.
-                </Text>
-                <Text my={2} color="gray.500">
-                    Important: The actual algorithm must be implemented itself. The use of functions like eval in JavaScript are not permitted.
+                    Allow the term calculator to accept lines in the form y = TERM with x as an additional possible character in the term. If such a complete equation is given, you display a simple x / y graph. For each value on the x axis, calculate y and plot the point (a continuous line is even better).
                 </Text>
 
                 <Text my={2} color="gray.600">
@@ -62,13 +58,10 @@ const Part1 = (props: Props) => {
                 <Button maxWidth="100px" my={2} onClick={submit}>
                     Submit
                 </Button>
-
-                <Text my={2} color="teal.600">
-                    Result : {props.result}
-                </Text>
+                {props.data.length > 0 && (<LineChartPart3 data={props.data} />)}
             </Stack>
         </Box>
     </>
 }
 
-export default Part1
+export default Part3
